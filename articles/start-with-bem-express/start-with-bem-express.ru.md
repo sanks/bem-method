@@ -21,7 +21,7 @@
 * принципами [БЭМ в CSS](../../method/bem-for-css/bem-for-css.ru.md);
 * возможностью писать декларативный JavaScript с использованием фреймворка [i-bem.js](https://ru.bem.info/platform/i-bem/) и шаблонизаторов [BEMHTML, BEMTREE](https://ru.bem.info/platform/bem-xjst/).
 
-![Social Services Search Robot](https://getmdl.io/assets/showcase/wallet_2x.jpg)
+![Social Services Search Robot](ssr.png)
 
 ## Целевая аудитория
 
