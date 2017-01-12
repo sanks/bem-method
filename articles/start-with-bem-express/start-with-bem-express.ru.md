@@ -113,22 +113,23 @@
 ## Файловая структура проекта
 
 ```files
-.enb/                 # Конфигурационные файлы для сборщика ENB
-common.blocks/        # Базовые реализации блоков
-desktop.bundles/      # Директории страниц проекта
-development.blocks/   # Блоки, находящиеся в разработке (не для Production)  
-libs/                 # Библиотеки
-node_modules/         # Пакеты
-server/               #
-static/               #
-.borschik             #
-.bowerrc              #
-.gitignore            # Служебный файл для указания в нём файлов и папок,
-                      # которые необходимо скрыть от системы контроля версий git.
-README.md             # Текстовое описание проекта
-bower.json            # Файл-манифест для менеджера пакетов Bower
-nodemon.json          #
-package.json          # Описание проекта для npm
+test-project/
+    .enb/                 # Конфигурационные файлы для сборщика ENB
+    common.blocks/        # Базовые реализации блоков
+    desktop.bundles/      # Директории страниц проекта
+    development.blocks/   # Блоки, находящиеся в разработке (не для Production)  
+    libs/                 # Библиотеки
+    node_modules/         # Пакеты
+    server/               #
+    static/               #
+    .borschik             #
+    .bowerrc              #
+    .gitignore            # Служебный файл для указания в нём файлов и папок,
+                          # которые необходимо скрыть от системы контроля версий git.
+    README.md             # Текстовое описание проекта
+    bower.json            # Файл-манифест для менеджера пакетов Bower
+    nodemon.json          #
+    package.json          # Описание проекта для npm
 ```
 
 ## Верстка
