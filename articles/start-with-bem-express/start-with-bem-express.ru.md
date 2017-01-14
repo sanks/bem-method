@@ -138,7 +138,7 @@ test-project/
 
 ![Social Search Robot](ssr-main-blocks.png)
 
-1. Блок `page`.
+1. [Блок `page`](#).
 2. Блок `header`.
 3. Блок `home`.
 4. Блок `serp`.
