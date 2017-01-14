@@ -136,7 +136,7 @@ test-project/
 
 ### Основные блоки
 
-
+![Social Search Robot](ssr-main-blocks.png)
 
 ### Создание блока
 
