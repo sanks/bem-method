@@ -2,9 +2,7 @@
 
 * [Обзор](#Обзор)
 * [Перед началом работы](#Перед-началом-работы)
-* [Настройка окружения](#Настройка-окружения)
-* [Создание репозитория проекта](#Создание-репозитория-проекта)
-* [Файловая структура проекта](#Файловая-структура-проекта)
+* [Начало работы](#Начало-работы)
 * [Верстка](#Верстка)
 * [Устранение неполадок](#Устранение-неполадок)
 
@@ -32,14 +30,22 @@
 * JavaScript;
 * БЭМ.
 
-## Настройка окружения
+## Начало работы
+
+* [Настройка окружения](#Настройка-окружения)
+* [Создание репозитория проекта](#Создание-репозитория-проекта)
+* [Файловая структура проекта](#Файловая-структура-проекта)
+* [Создание страницы](#Создание-страницы)
+* [Декларация БЭМ-сущностей](#Декларация-БЭМ-сущностей)
+
+### Настройка окружения
 
 Для начала работы необходимо установить:
 
 * [Node.js 4.0+](http://nodejs.org/);
 * [Git Bash](https://git-for-windows.github.io/) — для пользователей операционной системы Windows.
 
-## Создание репозитория проекта
+### Создание репозитория проекта
 
 Оптимальный путь создать динамический проект на БЭМ — использовать шаблонный репозиторий [bem-express](https://github.com/bem/bem-express). Он содержит необходимый минимум конфигурационных файлов, пакетов и позволяет быстро развернуть свой проект.
 
@@ -110,7 +116,9 @@
   };
   ```
 
-## Файловая структура проекта
+### Файловая структура проекта
+
+В результате выполненных действий локальная копия проекта должна иметь следующую файловую структуру:
 
 ```files
 test-project/
@@ -129,6 +137,90 @@ test-project/
     nodemon.json          # Конфигурация для пакета Nodemon
     package.json          # Описание проекта для npm
 ```
+
+### Создание страницы
+
+Исходники страниц размещаются в каталоге `desktop.bundles`. Изначально в проекте присутствует главная страница `index` с блоками:
+
+* `header`;
+* `body`;
+* `footer`.
+
+Блок `body` возвращает текст 'body content', который отобразится на экране.
+
+Для создания страницы необходимо:
+
+1. Разместить в `desktop.bundles` каталог с именем страницы, например, `hello`.
+2. Добавить в него файл `hello.bemdecl.js`.
+3. Перечислить необходимые для построения страницы [БЭМ-сущности](../../method/key-concepts/key-concepts.ru.md#БЭМ-сущность), например:
+
+  ```js
+  exports.blocks = [
+    { name: 'header' },
+    { name: 'body' },
+    { name: 'footer' }
+  ];
+  ```
+
+Такой список называется декларацией. Инструмент сборки, основываясь на данных из декларации, добавляет в [бандлы](../../method/build/build.ru.md#Введение) только перечисленные БЭМ-сущности.
+
+> Подробнее о том, как построить декларацию, см. в разделе [Способы получения декларации](../../method/declarations/declarations.ru.md#Способы-получения-декларации).
+
+### Декларация БЭМ-сущностей
+
+В `bem-express` задекларирован служебный блок [root](https://github.com/bem/bem-express/blob/master/desktop.bundles/index/index.bemdecl.js):
+
+```js
+exports.blocks = [
+    { name: 'root' }
+];  
+```
+
+Служит для подключения шаблона блока [page](https://github.com/bem/bem-express/blob/master/common.blocks/root/root.bemtree.js):
+
+```js
+block('root').replace()(function() {
+    var ctx = this.ctx,
+        data = this.data = ctx.data,
+        meta = data.meta || {},
+        og = meta.og || {};
+
+    if (ctx.context) return ctx.context;
+
+    return {
+        block: 'page',
+        title: data.title,
+        favicon: '/favicon.ico',
+        styles: [
+            {
+                elem: 'css',
+                url: '/index.min.css'
+            }
+        ],
+        scripts: [
+            {
+                elem: 'js',
+                url: '/index.min.js'
+            }
+        ],
+        head: [
+            { elem: 'meta', attrs: { name: 'description', content: meta.description } },
+            { elem: 'meta', attrs: { property: 'og:title', content: og.title || data.title } },
+            { elem: 'meta', attrs: { property: 'og:url', content: og.url } },
+            { elem: 'meta', attrs: { property: 'og:site_name', content: og.siteName } },
+            { elem: 'meta', attrs: { property: 'og:locale', content: og.locale || 'en_US' } },
+            { elem: 'meta', attrs: { property: 'og:type', content: 'website' } },
+            { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } }
+        ],
+        mods: {
+            theme: 'islands',
+            view: data.view
+        }
+    };
+});  
+```
+
+
 
 ## Верстка
 
