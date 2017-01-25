@@ -255,6 +255,7 @@ exports.blocks = [
 ```js
 exports.blocks = [
   { name: 'header' },
+  { name: 'logo' },
   { name: 'body' },
   { name: 'footer' }
 ];
