@@ -151,9 +151,9 @@ test-project/
 
 Для создания страницы необходимо:
 
-1. Разместить в `desktop.bundles` каталог с именем страницы, например, `hello`.
-2. Добавить в него файл `hello.bemdecl.js`.
-3. Перечислить в `hello.bemdecl.js` [БЭМ-сущности](../../method/key-concepts/key-concepts.ru.md#БЭМ-сущность), необходимые для построения страницы, например:
+1. Создать в `desktop.bundles` директорию с именем страницы, например, `hello`.
+2. Добавить в нее файл `hello.bemdecl.js`.
+3. Перечислить в `hello.bemdecl.js` блоки, необходимые для построения страницы, например:
 
   ```js
   exports.blocks = [
@@ -163,7 +163,56 @@ test-project/
   ];
   ```
 
-Такой список называется [декларацией](../../method/declarations/declarations.ru.md). Инструмент сборки, основываясь на данных из декларации, добавляет в [бандлы](../../method/build/build.ru.md#Введение) только перечисленные БЭМ-сущности.
+4. Создать в `common.blocks` директории блоков с соответствующими именами:
+
+  ```files
+  test-project/
+      common.blocks/        # Базовые реализации блоков
+          header/           # Директории блока header
+          body/             # Директории блока body
+          footer/           # Директории блока footer
+  ```
+
+5. Описать шаблоны для каждого блока.
+
+  ```files
+  test-project/
+      common.blocks/               # Базовые реализации блоков
+          header/                  # Директории блока header
+              header.bemtree.js    # Шаблон блока header
+          body/                    # Директории блока body
+              body.bemtree.js      # Шаблон блока body
+          footer/                  # Директории блока footer
+              footer.bemtree.js    # Шаблон блока footer
+  ```
+
+  Пример шаблона `header.bemtree.js`
+
+  ```js
+  block('header').content()(function() {
+      return [
+          'header content'
+      ];
+  });
+  ```
+
+6. Описать серверную часть в файле `server/index.js`.
+
+  ```js
+  app.get('/hello/', function(req, res) {
+      render(req, res, {
+          view: 'hello',
+          title: 'Hello page',
+          meta: {
+              description: 'Page description',
+              og: {
+                  url: 'https://site.com/hello',
+                  siteName: 'Site name'
+              }
+          }
+      })
+  });
+  ```
 
 ### Декларация БЭМ-сущностей
 
