@@ -248,7 +248,7 @@ exports.blocks = [
 
 Для более легкого восприятия удобно олицетворять зависимости с глаголом **ЗНАЕТ**. Проинспектировав файловую структуру `bem-express`, можно построить следующую схему:
 
-
+![sheme](https://rawgit.com/bem-site/bem-method/godfreyd-bem-in-dynamic/articles/start-with-bem-express/scheme.ru.svg)
 
 
 Служит для подключения шаблона блока [page](https://github.com/bem/bem-express/blob/master/common.blocks/root/root.bemtree.js):
