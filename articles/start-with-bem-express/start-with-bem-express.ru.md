@@ -214,6 +214,8 @@ test-project/
   });
   ```
 
+В результате страница будет доступна по ссылке: [http://localhost:3000/hello/](http://localhost:3000/hello/).
+
 ### Декларация БЭМ-сущностей
 
 В `bem-express` задекларирован служебный блок [root](https://github.com/bem/bem-express/blob/master/desktop.bundles/index/index.bemdecl.js):
