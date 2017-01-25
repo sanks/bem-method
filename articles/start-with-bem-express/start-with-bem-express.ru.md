@@ -152,8 +152,10 @@ test-project/
 Чтобы создать страницу (например, `hello`) необходимо:
 
 1. Разместить в `desktop.bundles` директорию `hello`.
-2. Добавить в нее файл `hello.bemdecl.js`.
-3. Перечислить в `hello.bemdecl.js` блоки, необходимые для построения страницы, например:
+2. Добавить в нее файл ([декларацию](../../method/declarations/declarations.ru.md)) `hello.bemdecl.js`.
+3. Описать декларацию — составить список блоков, элементов и модификаторов, используемых на странице.
+
+  Пример декларации `hello.bemdecl.js`:
 
   ```js
   exports.blocks = [
@@ -219,6 +221,10 @@ test-project/
 В результате страница `hello` будет доступна по ссылке: [http://localhost:3000/hello/](http://localhost:3000/hello/).
 
 ### Декларация БЭМ-сущностей
+
+
+
+
 
 В `bem-express` задекларирован служебный блок [root](https://github.com/bem/bem-express/blob/master/desktop.bundles/index/index.bemdecl.js):
 
