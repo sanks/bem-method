@@ -222,17 +222,34 @@ test-project/
 
 ### Декларация БЭМ-сущностей
 
+Как отмечалось ранее, декларация описывается в `bemdecl.js`-файлах и представляет собой список БЭМ-сущностей, используемых на странице.
 
+**Пример**
 
+```js
+exports.blocks = [
+  { name: 'header' },
+  { name: 'body' },
+  { name: 'footer' }
+];
+```
 
+В шаблонном репозитории `bem-express` задекларирован только блок `root`:
 
-В `bem-express` задекларирован служебный блок [root](https://github.com/bem/bem-express/blob/master/desktop.bundles/index/index.bemdecl.js):
+**Пример**
 
 ```js
 exports.blocks = [
     { name: 'root' }
 ];  
 ```
+
+Такое различие обусловлено использованием в `bem-express` [зависимостей](https://ru.bem.info/platform/deps/), для блоков, которые не отражены в декларации. Блок `root` является некой отправной точкой для сборщика.
+
+Для более легкого восприятия удобно олицетворять зависимости с глаголом **ЗНАЕТ**. Проинспектировав файловую структуру `bem-express`, можно построить следующую схему:
+
+
+
 
 Служит для подключения шаблона блока [page](https://github.com/bem/bem-express/blob/master/common.blocks/root/root.bemtree.js):
 

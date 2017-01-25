@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="740px" height="339px" viewBox="0 0 740 339" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>iPad Pro Portrait</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="19" y="19" width="700" height="300"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="700" height="300" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPad-Pro-Portrait">
+            <use id="Rectangle" stroke="#979797" mask="url(#mask-2)" stroke-width="3" stroke-linecap="square" fill="#252520" xlink:href="#path-1"></use>
+            <text id="'root'" font-family="Helvetica" font-size="16" font-weight="normal" fill="#E0D571">
+                <tspan x="109" y="171">'root'</tspan>
+            </text>
+            <text id="'page'" font-family="Helvetica" font-size="16" font-weight="normal" fill="#E0D571">
+                <tspan x="236" y="171">'page'</tspan>
+            </text>
+            <text id="'header'" font-family="Helvetica" font-size="16" font-weight="normal" fill="#E0D571">
+                <tspan x="465" y="117">'header'</tspan>
+            </text>
+            <text id="'logo'" font-family="Helvetica" font-size="16" font-weight="normal" fill="#E0D571">
+                <tspan x="617" y="117">'logo'</tspan>
+            </text>
+            <text id="'body'" font-family="Helvetica" font-size="16" font-weight="normal" fill="#E0D571">
+                <tspan x="465" y="170">'body'</tspan>
+            </text>
+            <text id="'footer'" font-family="Helvetica" font-size="16" font-weight="normal" fill="#E0D571">
+                <tspan x="465" y="224">'footer'</tspan>
+            </text>
+            <path d="M289.5,166.5 L381.5,166.5" id="Line" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <text id="ЗНАЕТ-о" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="292" y="160">ЗНАЕТ о</tspan>
+            </text>
+            <path d="M382.5,166.5 L454.5,166.5" id="Line" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <path id="Line-decoration-1" d="M443.7,169.5 L454.5,166.5 L443.7,163.5" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <path d="M382.5,219.5 L454.5,219.5" id="Line" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <path id="Line-decoration-1" d="M443.7,222.5 L454.5,219.5 L443.7,216.5" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <path d="M382.5,113.5 L454.5,113.5" id="Line" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <path id="Line-decoration-1" d="M443.7,116.5 L454.5,113.5 L443.7,110.5" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <path d="M153.5,166.5 L225.5,166.5" id="Line" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <path id="Line-decoration-1" d="M214.7,169.5 L225.5,166.5 L214.7,163.5" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <text id="ЗНАЕТ-о" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="156" y="160">ЗНАЕТ о</tspan>
+            </text>
+            <text id="root.deps.js" font-family="Helvetica" font-size="16" font-weight="normal" fill="#66D9EF">
+                <tspan x="149" y="185">root.deps.js</tspan>
+            </text>
+            <text id="входная-точка" font-family="Helvetica" font-size="16" font-weight="normal" fill="#F82672">
+                <tspan x="68.9570312" y="192">входная</tspan>
+                <tspan x="78.4140625" y="211">точка</tspan>
+            </text>
+            <path d="M531.5,113.5 L603.5,113.5" id="Line" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <path id="Line-decoration-1" d="M592.7,116.5 L603.5,113.5 L592.7,110.5" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <text id="ЗНАЕТ-о" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="534" y="107">ЗНАЕТ о</tspan>
+            </text>
+            <text id="header.deps.js" font-family="Helvetica" font-size="16" font-weight="normal" fill="#66D9EF">
+                <tspan x="527" y="132">header.deps.js</tspan>
+            </text>
+            <text id="page.deps.js" font-family="Helvetica" font-size="16" font-weight="normal" fill="#66D9EF">
+                <tspan x="284" y="185">page.deps.js</tspan>
+            </text>
+            <path d="M381.5,113.5 L381.5,219.5" id="Line" stroke="#979797" stroke-width="1.5" stroke-linecap="square"></path>
+            <text id="block" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="61" y="171">block</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
