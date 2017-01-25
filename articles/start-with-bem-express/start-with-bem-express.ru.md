@@ -246,56 +246,9 @@ exports.blocks = [
 
 Такое различие обусловлено использованием в `bem-express` [зависимостей](https://ru.bem.info/platform/deps/), для блоков, которые не отражены в декларации. Блок `root` является некой отправной точкой для сборщика.
 
-Для более легкого восприятия удобно олицетворять зависимости с глаголом **«ЗНАЕТ»**. Проинспектировав файловую структуру `bem-express`, можно построить следующую схему:
+Для более легкого восприятия удобно олицетворять зависимости с глаголом **«ЗНАЕТ»**. Проинспектировав файловую структуру `bem-express`, можно представить, как по зависимостям собираются нужные для страницы БЭМ-сущности:
 
 ![sheme](https://rawgit.com/bem-site/bem-method/godfreyd-bem-in-dynamic/articles/start-with-bem-express/scheme.ru.svg)
-
-
-Служит для подключения шаблона блока [page](https://github.com/bem/bem-express/blob/master/common.blocks/root/root.bemtree.js):
-
-```js
-block('root').replace()(function() {
-    var ctx = this.ctx,
-        data = this.data = ctx.data,
-        meta = data.meta || {},
-        og = meta.og || {};
-
-    if (ctx.context) return ctx.context;
-
-    return {
-        block: 'page',
-        title: data.title,
-        favicon: '/favicon.ico',
-        styles: [
-            {
-                elem: 'css',
-                url: '/index.min.css'
-            }
-        ],
-        scripts: [
-            {
-                elem: 'js',
-                url: '/index.min.js'
-            }
-        ],
-        head: [
-            { elem: 'meta', attrs: { name: 'description', content: meta.description } },
-            { elem: 'meta', attrs: { property: 'og:title', content: og.title || data.title } },
-            { elem: 'meta', attrs: { property: 'og:url', content: og.url } },
-            { elem: 'meta', attrs: { property: 'og:site_name', content: og.siteName } },
-            { elem: 'meta', attrs: { property: 'og:locale', content: og.locale || 'en_US' } },
-            { elem: 'meta', attrs: { property: 'og:type', content: 'website' } },
-            { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } }
-        ],
-        mods: {
-            theme: 'islands',
-            view: data.view
-        }
-    };
-});  
-```
-
-
 
 ## Верстка
 
