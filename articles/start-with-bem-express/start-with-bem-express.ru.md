@@ -103,7 +103,7 @@
   * [chokidar](https://github.com/paulmillr/chokidar), который будет следить за изменениями в директориях `*.blocks/` и перестраивать структуру проекта;
   * [livereload](https://github.com/napcs/node-livereload), который будет обновлять страницу в браузере.
 
-  Результат доступен по ссылке: [http://localhost:3000](http://localhost:3000).
+  **Результат доступен по ссылке:** [http://localhost:3000](http://localhost:3000).
 
   Должна открыться страница со следующим контентом:
 
