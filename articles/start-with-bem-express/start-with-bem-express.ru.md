@@ -189,7 +189,7 @@ test-project/
               footer.bemtree.js    # Шаблон блока footer
   ```
 
-  Пример шаблона `header.bemtree.js`
+  Пример шаблона `header.bemtree.js`:
 
   ```js
   block('header').content()(function() {
@@ -201,7 +201,7 @@ test-project/
 
   > **Примечание** Подробнее о [синтаксисе шаблонов](https://ru.bem.info/platform/bem-xjst/templates-syntax/).
 
-6. Описать серверную часть в файле `server/index.js`.
+6. Описать серверную часть в файле `server/index.js`:
 
   ```js
   app.get('/hello/', function(req, res) {
