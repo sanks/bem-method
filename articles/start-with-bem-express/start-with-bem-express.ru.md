@@ -176,7 +176,7 @@ test-project/
           footer/           # Директории блока footer
   ```
 
-5. Описать реализации блоков, например, шаблоны:
+5. Описать реализации блоков в отдельных файлах-технологиях, например, шаблоны:
 
   ```files
   test-project/
@@ -201,7 +201,7 @@ test-project/
 
   > **Примечание** Подробнее о [синтаксисе шаблонов](https://ru.bem.info/platform/bem-xjst/templates-syntax/).
 
-6. Описать серверную часть в файле `server/index.js`.
+6. Описать серверную часть для страницы в файле `server/index.js`.
 
   ```js
   app.get('/hello/', function(req, res) {
