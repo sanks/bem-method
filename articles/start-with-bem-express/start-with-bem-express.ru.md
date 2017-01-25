@@ -173,7 +173,7 @@ test-project/
           footer/           # Директории блока footer
   ```
 
-5. Описать реализации блоков, например, шаблоны `*.bemtree.js`:
+5. Описать реализации блоков, например, шаблоны:
 
   ```files
   test-project/
@@ -195,6 +195,8 @@ test-project/
       ];
   });
   ```
+
+  > **Примечание** Подробнее о [синтаксисе шаблонов](https://ru.bem.info/platform/bem-xjst/templates-syntax/).
 
 6. Описать серверную часть в файле `server/index.js`.
 
