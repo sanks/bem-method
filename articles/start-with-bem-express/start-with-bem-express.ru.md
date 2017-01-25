@@ -250,6 +250,16 @@ exports.blocks = [
 
 ![sheme](https://rawgit.com/bem-site/bem-method/godfreyd-bem-in-dynamic/articles/start-with-bem-express/scheme.ru.svg)
 
+Это равносильно такой декларации:
+
+```js
+exports.blocks = [
+  { name: 'header' },
+  { name: 'body' },
+  { name: 'footer' }
+];
+```
+
 ## Верстка & Верстка
 
 Перед тем, как мы начнем писать код, нужно определить из каких основных блоков будет состоять проект.
