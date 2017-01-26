@@ -263,19 +263,30 @@ exports.blocks = [
 
 ## Верстка
 
+* [Основные блоки]()
+  * [Реализация блоков в технологии BEMTREE]()
+  * [Реализация блоков в технологии DEPS]()
+
+
 Прежде чем мы начнем писать код, необходимо определить основные структурные блоки проекта.
 
 ### Основные блоки
 
 ![Social Search Robot](ssr-main-blocks.png)
 
-1. [Блок page](#Блок-page).
-2. [Блок header](#Блок-header).
-3. [Блок home](#Блок-home).
-4. [Блок result](#Блок-result).
-5. [Блок footer](#Блок-footer).
+Структуру страницы составляют следующие блоки:
 
-### Блок `page`
+1. `page`.
+2. `header`.
+3. `home`.
+4. `result`.
+5. `footer`.
+
+
+#### Реализация блоков в технологии BEMTREE
+
+
+##### Блок `page`
 
 **page.bemtree.js**
 
@@ -299,26 +310,13 @@ block('page').content()(function() {
 });
 ```
 
-**page.deps.js**
+##### Блок `header`
 
-```js
-({
-    shouldDeps: [
-        'header',
-        { block: 'home', mods: { full: true } },
-        'result',
-        'footer'
-    ]
-})
-```
+##### Блок `home`
 
-### Блок `header`
+##### Блок `result`
 
-### Блок `home`
-
-### Блок `result`
-
-### Блок `footer`
+##### Блок `footer`
 
 
 
