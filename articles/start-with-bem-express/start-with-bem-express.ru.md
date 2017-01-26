@@ -277,6 +277,41 @@ exports.blocks = [
 
 ### Блок `page`
 
+**page.bemtree.js**
+
+```js
+block('page').content()(function() {
+    return [
+        {
+            block: 'header'
+        },
+        {
+            block: 'home',
+            mods: { full: true }
+        },
+        {
+            block: 'result'
+        },
+        {
+            block: 'footer'
+        }
+    ];
+});
+```
+
+**page.deps.js**
+
+```js
+({
+    shouldDeps: [
+        'header',
+        { block: 'home', mods: { full: true } },
+        'result',
+        'footer'
+    ]
+})
+```
+
 ### Блок `header`
 
 ### Блок `home`
