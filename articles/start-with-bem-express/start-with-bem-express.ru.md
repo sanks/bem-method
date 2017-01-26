@@ -269,11 +269,11 @@ exports.blocks = [
 
 ![Social Search Robot](ssr-main-blocks.png)
 
-1. [Блок page](#).
-2. [Блок header](#).
-3. [Блок home](#).
-4. [Блок serp](#).
-5. [Блок footer](#).
+1. [Блок page](#Блок-page).
+2. [Блок header](#Блок-header).
+3. [Блок home](#Блок-home).
+4. [Блок result](#Блок-result).
+5. [Блок footer](#Блок-footer).
 
 ### Блок `page`
 
