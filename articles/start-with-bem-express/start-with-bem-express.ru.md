@@ -288,7 +288,7 @@ exports.blocks = [
 
 #### Блок `page`
 
-**page.bemtree.js**
+*page.bemtree.js*
 
 ```js
 block('page').content()(function() {
