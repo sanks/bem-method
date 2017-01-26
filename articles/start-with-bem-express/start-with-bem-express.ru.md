@@ -276,10 +276,10 @@ exports.blocks = [
 
 Структуру страницы составляют следующие блоки:
 
-1. `page`.
-2. `header`.
-3. `home`.
-4. `result`.
+1. `page`;
+2. `header`;
+3. `home`;
+4. `result`;
 5. `footer`.
 
 ### Реализация блоков в технологии BEMTREE
@@ -296,8 +296,7 @@ block('page').content()(function() {
             block: 'header'
         },
         {
-            block: 'home',
-            mods: { full: true }
+            block: 'home'
         },
         {
             block: 'result'
