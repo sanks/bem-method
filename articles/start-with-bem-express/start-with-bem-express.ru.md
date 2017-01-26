@@ -281,7 +281,7 @@ exports.blocks = [
 
 ### Блок `home`
 
-### Блок `serp`
+### Блок `result`
 
 ### Блок `footer`
 
